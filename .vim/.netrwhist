@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/synic/.vim'
+let g:netrw_dirhist_2='/home/synic/.vim/swp'
+let g:netrw_dirhist_3='/home/synic/.vim'
+let g:netrw_dirhist_4='/home/synic/.vim/plugged'
+let g:netrw_dirhist_5='/home/synic/.vim/plugged/jedi-vim'
+let g:netrw_dirhist_6='/home/synic/laravel'
