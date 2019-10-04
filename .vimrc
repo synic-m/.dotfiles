@@ -6,9 +6,6 @@ set fileformats=unix,dos,mac
 "----------normal setting-------------------
 ""-------------------------------------------
 "
-""
-"
-""
 "-----------------------------------------
 ""--------key mapping----------------------
 "esc to alt [
@@ -37,8 +34,6 @@ cnoremap <C-h> <Backspace>
 "--------------------------------------------
 ""
 "
-""
-"
 ""----------------------------------------------
 "------------setting swp undo------------------
 set noundofile
@@ -55,8 +50,21 @@ autocmd BufNewFile,BufRead *.css set ts=2 | set shiftwidth=2
 "---------end file type settings-------------------
 ""--------------------------------------------------
 "
-""--------------------------------------------------
-"plugin settings unit.vim---------------------------
+"--------------------------------------------------
+"-----------plug-vim-------------------------------
+call plug#begin()
+Plug 'davidhalter/jedi-vim'
+"ファイル表示をしやすくする
+Plug 'Shougo/unite.vim'
+Plug 'Shougo/neomru.vim'
+Plug 'scrooloose/nerdtree'
+
+call plug#end()
+""-----------end plug-vim---------------------------
+"--------------------------------------------------
+"
+"------------------------------------------------------
+"plugin settings unit.vim------------------------------
 " バッファ一覧
 noremap <C-P> :Unite buffer<CR>
 " ファイル一覧
@@ -72,23 +80,11 @@ au FileType unite inoremap <silent> <buffer> <expr> <C-J> unite#do_action['split
 au FileType unite nnoremap <silent> <buffer> <expr> <C-K> unite#do_action['vsplit')
 au FileType unite inoremap <silent> <buffer> <expr> <C-K> unite#do_action[]]]]ts=2 | set shiftwidth=2
 "end plugin settings unit.vim---------------------------
-"--------------------------------------------------
-"--------------------------------------------------
+"-------------------------------------------------------
+"
+"-------------------------------------------------------
 "nerdtree setting
 noremap <C-N> :NERDTree<CR>
 let NERDTreeShowHidden=1
 "end nerdtree setting
-"--------------------------------------------------
-"-----------plug-vim-------------------------------
-call plug#begin()
-Plug 'davidhalter/jedi-vim'
-"ファイル表示をしやすくする
-Plug 'Shougo/unite.vim'
-Plug 'Shougo/neomru.vim'
-Plug 'scrooloose/nerdtree'
-"---------unite vim--------------------------------
-"
-"---------end unite vim----------------------------
-call plug#end()
-""-----------end plug-vim---------------------------
-"--------------------------------------------------
+"---------------------------------------------------
