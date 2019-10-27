@@ -30,13 +30,15 @@ set wildmenu wildmode=list:full
 
 "ts tab -> space
 set expandtab
+"cursol line
+set cursorline
 
 
 "----------normal setting-------------------
 "-------------------------------------------
 "
 "-----------------------------------------
-""--------key mapping----------------------
+""--------key mapping---------------------
 "esc to alt [
 noremap <A-[> <esc>
 noremap! <A-[> <esc>
@@ -89,6 +91,7 @@ autocmd BufNewFile,BufRead *.css set ts=2 | set shiftwidth=2
 "--------------------------------------------------
 "-----------plug-vim-------------------------------
 call plug#begin()
+
 Plug 'davidhalter/jedi-vim' ,{ 'for': 'python' }
 Plug 'mattn/emmet-vim'
 "inoremap <C-y> <C-y>
@@ -98,6 +101,7 @@ Plug 'Shougo/unite.vim'
 Plug 'Shougo/neomru.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'thinca/vim-fontzoom'
+"メモ
 Plug 'mtth/scratch.vim'
 
 call plug#end()
